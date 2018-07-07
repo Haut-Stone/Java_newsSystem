@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="736.0" prefWidth="1152.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kernel.views.AdminVIewController">
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane fx:id="orderAndMagazineClassPane" prefHeight="200.0" prefWidth="200.0" stylesheets="@../statics/addDeleteUpdata.css">
+               <center>
+                  <VBox prefHeight="677.0" prefWidth="604.0" styleClass="mainHBox" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="44.0" prefWidth="200.0" spacing="14.0" styleClass="functionBar">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleNewOrder" text="添加订单" />
+                              <Button mnemonicParsing="false" onAction="#handleDeleteOrder" text="删除订单" />
+                              <Button mnemonicParsing="false" onAction="#handleUpdateOrder" text="更新订单" />
+                              <Button mnemonicParsing="false" onAction="#handleNewMagazineClass" text="添加分类" />
+                              <Button mnemonicParsing="false" onAction="#handleDeleteMagazineClass" text="删除分类" />
+                              <Button mnemonicParsing="false" onAction="#handleUpdateMagazineClass" text="更新分类" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="89.0" prefWidth="601.0">
+                           <children>
+                              <GridPane>
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="分类ID" />
+                                    <Label text="分类名称" GridPane.rowIndex="1" />
+                                    <TextField fx:id="fooMagazineClassIdField" GridPane.columnIndex="1" />
+                                    <TextField fx:id="fooMagazineClassNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="60.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="324.0" prefWidth="601.0">
+                           <children>
+                              <GridPane alignment="CENTER" prefHeight="100.0" prefWidth="302.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="订单ID" />
+                                    <Label text="订单用户" GridPane.rowIndex="1" />
+                                    <Label text="杂志名称" GridPane.rowIndex="2" />
+                                    <Label text="月份" GridPane.rowIndex="3" />
+                                    <Label text="份数" GridPane.rowIndex="4" />
+                                    <Label text="订单总金额/$" GridPane.rowIndex="5" />
+                                    <TextField fx:id="fooOrderIdField" GridPane.columnIndex="1" />
+                                    <ComboBox fx:id="fooOrderUsernameBox" editable="true" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <ComboBox fx:id="fooOrderMagazineNameBox" editable="true" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <ChoiceBox fx:id="fooMonthBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <ChoiceBox fx:id="fooCopiesNumBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <TextField fx:id="fooTotalPriceField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="60.0" />
+                                 </HBox.margin>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </center>
+               <right>
+                  <TableView fx:id="fooMagazineClassTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TableColumn fx:id="fooMagazineClassIdColumn" prefWidth="75.0" text="分类ID" />
+                      <TableColumn fx:id="fooMagazineClassNameColumn" prefWidth="75.0" text="分类名称" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </right>
+               <left>
+                  <TableView fx:id="fooOrderTableView" prefHeight="677.0" prefWidth="351.0" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TableColumn fx:id="fooOrderIdColumn" prefWidth="75.0" text="订单编号" />
+                      <TableColumn fx:id="fooUserNameColumn" prefWidth="75.0" text="用户姓名" />
+                        <TableColumn fx:id="fooMagazineNameColumn" prefWidth="75.0" text="杂志名称" />
+                        <TableColumn fx:id="fooTotalPriceColumn" prefWidth="75.0" text="总金额" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </left>
+            </BorderPane>
+            <BorderPane fx:id="searchPane" stylesheets="@../statics/Search.css" visible="false">
+               <center>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox fx:id="filterBox" alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="815.0" spacing="10.0">
+                           <children>
+                              <Label styleClass="bigLabel" text="Filter">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin></Label>
+                              <Label styleClass="smallLabel" text="报刊分类" />
+                              <ComboBox fx:id="seMagazineClassBox" editable="true" onMouseClicked="#updateSeMagezineClassBox" prefWidth="150.0" promptText="报刊分类" visibleRowCount="7" />
+                              <Label styleClass="smallLabel" text="金额区间/$" />
+                              <ComboBox fx:id="sePriceIntervalBox" prefWidth="150.0" visibleRowCount="7" />
+                              <Button fx:id="filterButton" maxHeight="13.0" maxWidth="13.0" minHeight="13.0" minWidth="13.0" mnemonicParsing="false" onAction="#handleFilter" prefHeight="13.0" prefWidth="13.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox fx:id="searchBox" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="815.0" spacing="10.0">
+                           <children>
+                              <Label fx:id="searchLabel" styleClass="bigLabel" text="Serach">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin></Label>
+                              <ComboBox fx:id="seMagazineNameBox" editable="true" onMouseClicked="#updateSeMagazineNameBox" prefHeight="27.0" prefWidth="114.0" promptText="报刊名称" visibleRowCount="7" />
+                              <ComboBox fx:id="seUserNameBox" editable="true" onMouseClicked="#updateSeUserNameBox" prefHeight="27.0" prefWidth="107.0" promptText="用户名称" visibleRowCount="7" />
+                              <ComboBox fx:id="seCopiesNumBox" prefHeight="27.0" prefWidth="110.0" promptText="订阅份数" visibleRowCount="7" />
+                              <ComboBox fx:id="seMonthBox" prefHeight="27.0" prefWidth="107.0" promptText="订阅月数" visibleRowCount="7" />
+                              <Button fx:id="searchButton" maxHeight="13.0" maxWidth="13.0" minHeight="13.0" minWidth="13.0" mnemonicParsing="false" onAction="#handleSearch" prefHeight="13.0" prefWidth="13.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="20.0" right="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <TableView fx:id="seTableView" prefHeight="508.0" prefWidth="1112.0">
+                          <columns>
+                            <TableColumn fx:id="seOrderIdColumn" prefWidth="75.0" text="订单编号" />
+                            <TableColumn fx:id="seMagaNameColumn" prefWidth="75.0" text="报刊名称" />
+                              <TableColumn fx:id="seUserNameColumn" prefWidth="75.0" text="用户名称" />
+                              <TableColumn fx:id="seCopiesNumColumn" prefWidth="75.0" text="订阅份数" />
+                              <TableColumn fx:id="seMonthColumn" prefWidth="75.0" text="订阅月数" />
+                              <TableColumn fx:id="seTotalPriceColumn" prefWidth="75.0" text="订单总金额/$" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" />
+                           </VBox.margin>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="statisticPane" prefHeight="334.0" prefWidth="424.0" stylesheets="@../statics/statistic.css" visible="false">
+               <left>
+                  <HBox alignment="CENTER" prefHeight="488.0" prefWidth="1152.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <PieChart fx:id="statisticPriceChart" prefHeight="471.0" prefWidth="511.0" />
+                        <BarChart fx:id="magazineBarChart" prefHeight="471.0" prefWidth="569.0">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" tickLabelFill="WHITE" tickLabelRotation="-64.0" fx:id="xAxis" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" tickLabelFill="WHITE" />
+                          </yAxis>
+                        </BarChart>
+                     </children>
+                  </HBox>
+               </left>
+               <top>
+                  <VBox prefHeight="206.0" prefWidth="1152.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <GridPane hgap="20.0" prefHeight="89.0" prefWidth="784.0" vgap="10.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="640.8724060058594" minWidth="10.0" prefWidth="577.343017578125" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="575.8358154296875" minWidth="10.0" prefWidth="574.656982421875" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="44.0" prefWidth="614.0" spacing="14.0" styleClass="darkHbox">
+                                 <children>
+                                    <Label styleClass="commonLabel" text="最富有的用户" />
+                                    <Label fx:id="mostRichUser" styleClass="goldLabel" text="Label" />
+                                    <Label styleClass="commonLabel" text="订单总价值" />
+                                    <Label fx:id="mostRichUsersTotalPrice" styleClass="goldLabel" text="Label" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="14.0" styleClass="darkHbox" GridPane.columnIndex="1">
+                                 <children>
+                                    <Label styleClass="commonLabel" text="订单数最多的用户" />
+                                    <Label fx:id="mostOrderNumUser" styleClass="goldLabel" text="Label" />
+                                    <Label styleClass="commonLabel" text="订单数" />
+                                    <Label fx:id="mostOrderNumUsersOrderNum" styleClass="goldLabel" text="Label" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="44.0" prefWidth="410.0" spacing="14.0" styleClass="darkHbox" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label styleClass="commonLabel" text="最受欢迎杂志" />
+                                    <Label fx:id="bestMagazine" styleClass="goldLabel" text="Label" />
+                                    <Label styleClass="commonLabel" text="共计订阅份数" />
+                                    <Label fx:id="bestMagazineCopiesNum" styleClass="goldLabel" text="Label" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="14.0" styleClass="darkHbox" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label styleClass="commonLabel" text="最受欢迎分类" />
+                                    <Label fx:id="bestClass" styleClass="goldLabel" text="Label" />
+                                    <Label styleClass="commonLabel" text="共计订阅份数" />
+                                    <Label fx:id="bestClassOrderNum" styleClass="goldLabel" text="Label" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                        </GridPane>
+                        <GridPane prefHeight="88.0" prefWidth="1112.0" vgap="10.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="737.6425476074219" minWidth="10.0" prefWidth="576.9305419921875" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="598.6460571289062" minWidth="10.0" prefWidth="575.0694580078125" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="36.1788330078125" minHeight="10.0" prefHeight="36.1788330078125" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="42.072998046875" minHeight="10.0" prefHeight="33.8211669921875" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="44.0" prefWidth="305.0" spacing="14.0" styleClass="darkHbox">
+                                 <children>
+                                    <Label styleClass="commonLabel" text="尊贵用户" />
+                                    <ComboBox fx:id="anUserNameBox" editable="true" onMouseClicked="#updateAnUserNameBox" prefWidth="150.0" />
+                                    <Label styleClass="commonLabel" text="的订单总额" />
+                                    <Label fx:id="anUserNameLabel" styleClass="goldLabel" text="0$" />
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets right="10.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="14.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#handleNamePricePie" text="按杂志名统计金额" />
+                                    <Button mnemonicParsing="false" onAction="#handleClassPricePie" text="按分类统计金额" />
+                                 </children>
+                                 <padding>
+                                    <Insets right="7.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="14.0" styleClass="darkHbox" GridPane.columnIndex="1">
+                                 <children>
+                                    <Label graphicTextGap="0.0" styleClass="commonLabel" text="优秀杂志" />
+                                    <ComboBox fx:id="anMagazineNameBox" editable="true" onMouseClicked="#updateAnMagazineNameBox" prefWidth="150.0" />
+                                    <Label styleClass="commonLabel" text="订单总额" />
+                                    <Label fx:id="anMagazineNameLabel" styleClass="goldLabel" text="0$" />
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="337.0" spacing="14.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#handleMagazinePriceBarChart" text="按杂志统计金额" />
+                                    <Button mnemonicParsing="false" onAction="#handleMagezineCopiesNumberBarChart" text="按分类统计金额" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="7.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+                           </VBox.margin>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </top></BorderPane>
+            <BorderPane fx:id="magazinPane" prefHeight="200.0" prefWidth="200.0" stylesheets="@../statics/addDeleteUpdata.css" visible="false">
+               <left>
+                  <TableView fx:id="magazineTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TableColumn fx:id="magazineIdColumn" prefWidth="75.0" text="报刊代号" />
+                      <TableColumn fx:id="magazineNameColumn" prefWidth="75.0" text="报刊名称" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </left>
+               <center>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <top>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="615.0" spacing="14.0" styleClass="functionBar" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleNewMagazine" text="添加杂志" />
+                              <Button mnemonicParsing="false" onAction="#handleDeleteMagezine" text="删除杂志" />
+                              <Button mnemonicParsing="false" onAction="#handleUpdateMagazine" text="更新杂志">
+                                 <HBox.margin>
+                                    <Insets right="14.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </top>
+                     <center>
+                        <HBox prefHeight="100.0" prefWidth="200.0" styleClass="mainHBox" BorderPane.alignment="CENTER">
+                           <children>
+                              <VBox alignment="TOP_RIGHT" prefHeight="632.0" prefWidth="449.0">
+                                 <children>
+                                    <StackPane prefHeight="547.0" prefWidth="504.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Rectangle fx:id="imageBorder" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="536.0" stroke="BLACK" strokeType="INSIDE" width="413.0" />
+                                          <ImageView fx:id="magazineCover" fitHeight="516.0" fitWidth="376.0" pickOnBounds="true" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="30.0" />
+                                       </VBox.margin>
+                                    </StackPane>
+                                    <Button fx:id="imageButton" mnemonicParsing="false" onAction="#handleSwitchImage" text="选择图片">
+                                       <VBox.margin>
+                                          <Insets bottom="30.0" right="30.0" />
+                                       </VBox.margin></Button>
+                                 </children>
+                              </VBox>
+                              <StackPane prefHeight="632.0" prefWidth="392.0">
+                                 <children>
+                                    <GridPane prefHeight="632.0" prefWidth="254.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="118.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.0" minWidth="10.0" prefWidth="274.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="87.0" minHeight="6.0" prefHeight="44.0" valignment="TOP" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="147.0" minHeight="2.0" prefHeight="42.0" valignment="TOP" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="354.0" minHeight="6.0" prefHeight="40.0" valignment="TOP" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="382.0" minHeight="10.0" prefHeight="42.0" valignment="TOP" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="407.0" minHeight="10.0" prefHeight="39.0" valignment="TOP" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="431.0" minHeight="10.0" prefHeight="41.0" valignment="TOP" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="441.0" minHeight="10.0" prefHeight="224.0" valignment="TOP" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="报刊代号" />
+                                          <Label text="报刊名称" GridPane.rowIndex="1" />
+                                          <Label text="出版报社" GridPane.rowIndex="2" />
+                                          <Label text="出版周期" GridPane.rowIndex="3" />
+                                          <Label text="每月收费/$" GridPane.rowIndex="4" />
+                                          <Label text="内容介绍" GridPane.rowIndex="6" />
+                                          <Label text="分类名称" GridPane.rowIndex="5" />
+                                          <TextField fx:id="magazineIdField" GridPane.columnIndex="1" />
+                                          <TextField fx:id="magazineNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField fx:id="magazineOfficeField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <TextField fx:id="magazineCycleField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <TextField fx:id="magazineMonthPriceField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <TextArea fx:id="magazineIntroArea" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                          <ChoiceBox fx:id="magazineClassNameBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                       </children>
+                                       <StackPane.margin>
+                                          <Insets top="60.0" />
+                                       </StackPane.margin>
+                                    </GridPane>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="100.0" />
+                                 </HBox.margin>
+                              </StackPane>
+                           </children>
+                        </HBox>
+                     </center>
+                  </BorderPane>
+               </center></BorderPane>
+            <BorderPane fx:id="commonUserPane" prefHeight="200.0" prefWidth="200.0" stylesheets="@../statics/addDeleteUpdata.css" visible="false">
+               <left>
+                  <TableView fx:id="commonUserTableView" prefHeight="677.0" prefWidth="318.0" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TableColumn fx:id="commonUserIdColumn" prefWidth="75.0" text="用户ID" />
+                      <TableColumn fx:id="commonUserNameColumn" prefWidth="75.0" text="用户名" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </left>
+               <center>
+                  <VBox prefHeight="677.0" prefWidth="476.0" styleClass="mainHBox" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="615.0" spacing="14.0" styleClass="functionBar">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleNewCommonUser" text="添加用户" />
+                              <Button mnemonicParsing="false" onAction="#handleDeleteCommonUser" text="删除用户" />
+                              <Button mnemonicParsing="false" onAction="#handleUpdateCommonUser" text="更新用户">
+                                 <HBox.margin>
+                                    <Insets right="14.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="325.0" prefWidth="834.0">
+                           <children>
+                              <GridPane hgap="10.0" prefHeight="325.0" prefWidth="413.0" vgap="14.0">
+                                <columnConstraints>
+                                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="484.08526611328125" minWidth="10.0" prefWidth="92.6328125" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="759.0203552246094" minWidth="10.0" prefWidth="230.3671875" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="用户ID" />
+                                    <Label text="用户名" GridPane.rowIndex="1" />
+                                    <Label text="用户密码" GridPane.rowIndex="2" />
+                                    <Label text="真实姓名" GridPane.rowIndex="3" />
+                                    <Label text="身份证号" GridPane.rowIndex="4" />
+                                    <Label text="联系电话" GridPane.rowIndex="5" />
+                                    <Label text="联系地址" GridPane.rowIndex="6" />
+                                    <TextField fx:id="commonUserIdField" prefHeight="29.0" prefWidth="458.0" GridPane.columnIndex="1" />
+                                    <TextField fx:id="commonUserNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="commonUserpassField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField fx:id="commonUserTrueNameField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <TextField fx:id="commonUserSidField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <TextField fx:id="commonUserTelField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <TextField fx:id="commonUserAddrField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </center></BorderPane>
+            <BorderPane fx:id="adminPane" prefHeight="200.0" prefWidth="200.0" stylesheets="@../statics/addDeleteUpdata.css" visible="false">
+               <left>
+                  <TableView fx:id="adminTableView" prefHeight="677.0" prefWidth="357.0" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TableColumn fx:id="adminIdColumn" prefWidth="75.0" text="用户ID" />
+                      <TableColumn fx:id="adminNameColumn" prefWidth="75.0" text="用户姓名" />
+                        <TableColumn fx:id="adminPasswordColumn" prefWidth="75.0" text="用户密码" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </left>
+               <center>
+                  <VBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="100.0" styleClass="mainHBox" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="484.0" spacing="14.0" styleClass="functionBar">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleNewAdmin" text="添加管理员" />
+                              <Button mnemonicParsing="false" onAction="#handleDeleteAdmin" text="删除管理员" />
+                              <Button mnemonicParsing="false" onAction="#handleSubmitAdmin" text="更新管理员信息">
+                                 <HBox.margin>
+                                    <Insets right="14.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="127.0" prefWidth="795.0">
+                           <children>
+                              <GridPane hgap="10.0" vgap="14.0">
+                                <columnConstraints>
+                                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="234.56512451171875" minWidth="10.0" prefWidth="145.34609985351562" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="338.6539001464844" minWidth="10.0" prefWidth="338.6539001464844" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label fx:id="adminIdLabel" text="管理员ID" />
+                                    <Label fx:id="adminNameLabel" text="管理员用户名" GridPane.rowIndex="1" />
+                                    <Label fx:id="adminPasswordLabel" text="管理员密码" GridPane.rowIndex="2" />
+                                    <TextField fx:id="adminIdField" GridPane.columnIndex="1" />
+                                    <TextField fx:id="adminNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="adminPasswordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </center></BorderPane>
+         </children>
+      </StackPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="60.0" prefWidth="1152.0" styleClass="topBar" stylesheets="@../statics/menubar.css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="20.0" AnchorPane.leftAnchor="0.0">
+               <children>
+                  <Label text="报刊订阅管理系统">
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="450.0" layoutY="18.0" spacing="14.0" stylesheets="@../statics/menubar.css" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label text="尊敬的管理员:" />
+                  <Label fx:id="userNameLabel" text="用户名" />
+                  <Label onMouseClicked="#handleToOrderAndMagazineClass" text="分类及订单管理" />
+                  <Label onMouseClicked="#handleToSearch" text="订单查询" />
+                  <Label fx:id="toStatisticButton" onMouseClicked="#handleToStatistic" text="数据统计" />
+                  <Label fx:id="toMagazineButton" onMouseClicked="#handleTomagazine" text="报刊管理" />
+                  <Label fx:id="toCommonUserButton" onMouseClicked="#handleToCommonUser" text="用户管理" />
+                  <Label fx:id="toAdminButton" onMouseClicked="#handleToAdmin" text="管理员管理" />
+                  <Label fx:id="logOutButton" onMouseClicked="#handleLogout" text="退出">
+                     <HBox.margin>
+                        <Insets right="60.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

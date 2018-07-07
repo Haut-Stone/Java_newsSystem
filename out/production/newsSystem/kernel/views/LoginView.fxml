@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="outStackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.99" prefHeight="640.0" prefWidth="1152.0" styleClass="inputText" stylesheets="@../statics/login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kernel.views.LoginViewController">
+   <children>
+      <VBox fx:id="signUpBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
+         <StackPane.margin>
+            <Insets bottom="80.0" left="428.0" right="428.0" top="80.0" />
+         </StackPane.margin>
+         <children>
+            <Label text="用户注册" textAlignment="CENTER" textFill="#ffffff8f">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+            <TextField fx:id="commonUserUsername" promptText="用户名" styleClass="inputText">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="commonUserPassword" promptText="密码" styleClass="inputText">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="commonUserTruename" promptText="真实姓名" styleClass="inputText">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="commonUserSid" promptText="身份证号" styleClass="inputText">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="commonUserTel" promptText="联系电话" styleClass="inputText">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="commonUserAddress" promptText="联系地址" styleClass="inputText">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </TextField>
+            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="250.0" spacing="5.0">
+               <children>
+                  <Button fx:id="saveToDataBaseButton" mnemonicParsing="false" onAction="#handleNewUser" prefHeight="27.0" prefWidth="152.0" styleClass="pinkBG" text="注册" textFill="#ffffff8f">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="backButton" mnemonicParsing="false" onAction="#handleBack" text="返回" textFill="#ffffff8f">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="23.0" right="23.0" />
+         </padding>
+      </VBox>
+      <VBox fx:id="loginBox" alignment="CENTER" prefHeight="439.0" prefWidth="494.0">
+         <children>
+            <Label text="报刊订阅管理系统" textFill="#ffffff8f">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameField" prefHeight="35.0" prefWidth="252.0" promptText="用户名" scaleShape="false" styleClass="inputText" text="石佳欢">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <PasswordField fx:id="passwordField" prefHeight="28.0" prefWidth="497.0" promptText="密码" styleClass="inputText" text="123">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </PasswordField>
+            <CheckBox fx:id="isAdmin" mnemonicParsing="false" selected="true" text="我是管理员" textFill="#ffffff8f">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </CheckBox>
+            <HBox alignment="CENTER" prefHeight="29.0" prefWidth="252.0" spacing="5.0">
+               <children>
+                  <Button fx:id="loginButton" mnemonicParsing="false" onAction="#handleLogin" prefHeight="33.0" prefWidth="152.0" text="登录" textFill="#ffffff8f">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="signUpButton" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="34.0" prefWidth="73.0" text="注册" textFill="#ffffff8f">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <StackPane.margin>
+            <Insets bottom="145.0" left="427.0" right="427.0" top="145.0" />
+         </StackPane.margin>
+         <padding>
+            <Insets left="23.0" right="23.0" top="25.0" />
+         </padding>
+      </VBox>
+   </children>
+</StackPane>

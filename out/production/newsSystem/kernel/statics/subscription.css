@@ -1,0 +1,105 @@
+BorderPane {
+    -fx-background-color: rgb(79, 79, 79);
+}
+
+#bg {
+    -fx-background-color: white;
+}
+
+HBox {
+    -fx-background-color: rgb(61, 61, 61);
+}
+
+.mainView {
+    -fx-background-color: rgb(79, 79, 79);
+}
+
+AnchorPane {
+    -fx-background-color: #3D3D3D;
+}
+
+GridPane > Label {
+    -fx-text-fill: white;
+    -fx-font-size: 17px;
+}
+
+#imageBorder {
+    -fx-fill: white;
+}
+
+.funcLabel {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+#confirmButton {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-color: #202020;
+}
+
+/*表总体*/
+.table-view {
+    /*主色调底色，但是item也会添加一个浅色*/
+    -fx-base: black;
+    /*item背景色*/
+    -fx-control-inner-background: #6E6E6E;
+    /*总的背景色 包括蓝色提示框*/
+    -fx-background-color: #3D3D3D;
+    /*两个border的颜色透明*/
+    -fx-table-cell-border-color:  transparent;
+    -fx-table-header-border-color: transparent;
+    /*内边距*/
+    /*-fx-padding:5;*/
+}
+
+/*搞定背景色*/
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler{
+    /*-fx-size: 35;*/
+    /*-fx-border-width: 0 0 1 0;*/
+    /*让header透明*/
+    -fx-background-color: transparent;
+    /*!*设置border的颜色，就是那根下划线*!*/
+    /*-fx-border-color:*/
+            /*transparent*/
+            /*transparent*/
+            /*derive(-fx-base, 80%)*/
+            /*transparent;*/
+
+    /*!*调整border和字体的距离*!*/
+    /*-fx-border-insets: 0 10 1 0;*/
+}
+
+/*表头文字*/
+.table-view .column-header .label {
+    -fx-font-size: 17px;
+    /*-fx-font-family: "Segoe UI Light";*/
+    /*-fx-text-fill: white;*/
+    -fx-alignment: center-left;
+    /*-fx-opacity: 1;*/
+}
+
+.table-view .column-header {
+    -fx-pref-height: 42px;
+}
+
+/*选中时的颜色*/
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;
+}
+
+.choice-box {
+    -fx-background-color: #202020;
+}
+
+.choice-box > .label {
+    -fx-text-fill: white;
+}
+
+.choice-box > .open-button > .arrow {
+    -fx-background-color: white;
+}

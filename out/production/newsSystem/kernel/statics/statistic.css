@@ -1,0 +1,65 @@
+.commonLabel {
+    -fx-font-size: 17px;
+    -fx-text-fill: white;
+}
+
+#statisticPane {
+    -fx-background-color: #4F4F4F;
+}
+
+.goldLabel {
+    -fx-font-size: 21px;
+    -fx-text-fill: #ffd81b;
+}
+
+Button {
+    -fx-background-color: #444343;
+    -fx-text-fill: white;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-border-color: #979797;
+}
+
+.darkHbox {
+    -fx-background-color: #3D3D3D;
+    -fx-border-radius: 4px;
+    -fx-border-width: 1px;
+    -fx-border-color: rgba(151, 151, 151, 0.72);
+}
+
+.chart-pie-label {
+    -fx-fill: white;
+}
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+.chart {
+    -fx-fill: white;
+}
+
+.slider .axis {
+    -fx-tick-label-fill: white;
+    -fx-tick-length: 5px;
+    -fx-minor-tick-length: 3px;
+    -fx-border-color: null;
+}
+
+.combo-box-base {
+    -fx-background-color: #202020;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
+
+.combo-box-base:editable > .arrow-button {
+    -fx-background-color: #202020;
+}
+
+.combo-box-base > .arrow-button > .arrow {
+    -fx-background-color: #afafaf;
+}
+
+.combo-box-base:editable > .text-field {
+    -fx-background-color: #6E6E6E;
+    -fx-text-fill: white;
+}

@@ -1,0 +1,47 @@
+#outStackPane {
+    -fx-background-image: url("./images/systemUse/loginCover.jpg");
+    -fx-background-size: 1152px 640px;
+    -fx-background-repeat: none;
+}
+
+VBox {
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-background-radius: 4px;
+    /*-fx-effect: dropshadow(gaussian, black, 10, 0.1, 0, 0);*/
+}
+
+.inputText {
+    -fx-background-color: rgba(0, 0, 0, 0);
+    -fx-border-color: rgba(256, 256, 256, 0.48);
+    /*-fx-border-bottom: 1px rgba(256, 256, 256, 1);*/
+    /*-fx-base: #1d1d1d;*/
+    -fx-text-fill: rgba(195, 195, 195, 0.70);
+    -fx-border-width: 0 0 1 0;
+    /*-fx-border-radius: 4px;*/
+
+}
+
+.functionButton {
+    -fx-border-radius: 4px;
+}
+
+#loginButton {
+    -fx-background-color: rgba(0, 246, 255, 0.53);
+}
+
+#backButton {
+    -fx-background-color: rgba(0, 246, 255, 0.53);
+}
+
+#signUpButton {
+    -fx-background-color: rgba(243, 137, 226, 0.53);
+}
+
+.pinkBG {
+    -fx-background-color: rgba(243, 137, 226, 0.53);
+}
+
+/*左侧的打钩盒子*/
+.check-box > .box {
+    -fx-background-color: rgba(256, 256, 256, 0.56);
+}

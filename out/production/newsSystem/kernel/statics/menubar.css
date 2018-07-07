@@ -1,0 +1,17 @@
+
+.topBar {
+    -fx-background-color: rgb(32, 32, 32);
+}
+
+Label {
+    -fx-text-fill: white;
+    -fx-font-size: 17px;
+}
+
+.label:hover {
+    -fx-text-fill: #78d2ff;
+}
+
+#userNameLabel {
+    -fx-text-fill: #31ff00;
+}

@@ -1,0 +1,24 @@
+HBox {
+    -fx-background-color: #4F4F4F;
+}
+
+Label {
+    -fx-text-fill: white;
+}
+
+TextField {
+    -fx-background-color: #737171;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-border-color: #979797;
+    -fx-text-fill: #AEAEAE;
+}
+
+Button {
+    -fx-background-color: #444343;
+    -fx-text-fill: white;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-border-color: #979797;
+}
+

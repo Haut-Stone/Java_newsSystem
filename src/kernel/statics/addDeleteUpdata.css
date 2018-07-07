@@ -1,0 +1,127 @@
+/*表总体*/
+.table-view {
+    /*主色调底色，但是item也会添加一个浅色*/
+    -fx-base: #3D3D3D;
+    /*item背景色*/
+    -fx-control-inner-background: #6E6E6E;
+    /*总的背景色 包括蓝色提示框*/
+    -fx-background-color: #3D3D3D;
+    /*两个border的颜色透明*/
+    -fx-table-cell-border-color:  transparent;
+    -fx-table-header-border-color: transparent;
+    /*内边距*/
+    /*-fx-padding:5;*/
+}
+
+/*搞定背景色*/
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler{
+    -fx-background-color: transparent;
+}
+
+/*表头文字*/
+.table-view .column-header .label {
+    -fx-font-size: 17px;
+    -fx-alignment: center-left;
+}
+
+.table-view .column-header {
+    -fx-pref-height: 42px;
+}
+
+/*选中时的颜色*/
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;
+}
+
+.functionBar {
+    -fx-background-color: #3D3D3D;
+}
+
+.functionBar > .button {
+    -fx-background-color: #202020;
+    -fx-text-fill: white;
+}
+
+.functionBar > .button:hover {
+    -fx-background-color: #737171;
+}
+
+/*主要视图区域*/
+.mainHBox {
+    -fx-background-color: #4F4F4F;
+}
+
+#imageButton {
+    -fx-background-color: #202020;
+    -fx-text-fill: white;
+}
+
+#imageButton:hover {
+    -fx-background-color: #737171;
+}
+
+
+GridPane > Label {
+    -fx-text-fill: white;
+    -fx-font-size: 17px;
+}
+
+TextField {
+    -fx-background-color: #737171;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-border-color: #979797;
+    -fx-text-fill: #AEAEAE;
+}
+
+.choice-box {
+    -fx-background-color: #737171;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-border-color: #979797;
+}
+
+.choice-box > .label {
+    -fx-text-fill: #AEAEAE;
+}
+
+.choice-box > .open-button > .arrow {
+    -fx-background-color: white;
+}
+
+.text-area > .scroll-pane {
+    -fx-background-color: #737171;
+}
+
+.text-area .content {
+    -fx-text-fill: #AEAEAE;
+    -fx-cursor: text;
+    -fx-background-color: #737171;
+    -fx-background-radius: 2;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-border-color: #979797;
+}
+
+.combo-box-base {
+    -fx-background-color: #6E6E6E;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
+
+.combo-box-base:editable > .arrow-button {
+    -fx-background-color: #404040;
+}
+
+.combo-box-base > .arrow-button > .arrow {
+    -fx-background-color: #afafaf;
+}
+
+.combo-box-base:editable > .text-field {
+    -fx-background-color: #6E6E6E;
+    -fx-text-fill: white;
+}
