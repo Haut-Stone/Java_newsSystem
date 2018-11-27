@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/newsSystem/kernel/LICENCE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/newsSystem/kernel/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kernel/LICENCE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kernel/README.md" beforeDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -144,10 +138,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kernel/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
+            <state relative-caret-position="506">
               <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -158,12 +152,12 @@
       </file>
       <file leaf-file-name="CommonUserView.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kernel/views/CommonUserView.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
               <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file leaf-file-name="DialogUtils.java" pinned="false" current-in-tab="false">
@@ -187,11 +181,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JdbcUtils.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JdbcUtils.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/kernel/utils/JdbcUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1100">
-              <caret line="60" column="49" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
+            <state relative-caret-position="22">
+              <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -288,7 +282,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1680" />
-    <option name="height" value="948" />
+    <option name="height" value="1028" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -299,6 +293,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
@@ -341,7 +336,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -522,11 +516,14 @@
       <workItem from="1530773549553" duration="1102000" />
       <workItem from="1530953152831" duration="87000" />
       <workItem from="1530953921292" duration="105000" />
+      <workItem from="1537597950175" duration="125000" />
+      <workItem from="1537668089738" duration="512000" />
+      <workItem from="1537670066949" duration="6000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="211634000" />
+    <option name="totallyTimeSpent" value="212277000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -538,32 +535,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1680" height="948" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1680" height="1028" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4993895" weight="0.25499412" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32837528" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50061053" side_tool="true" weight="0.25499412" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49940476" weight="0.2562929" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32902467" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.79748285" visible="true" weight="0.1375" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.792696" visible="true" weight="0.14163615" />
       <window_info anchor="right" id="Database" order="3" weight="0.32967034" />
-      <window_info id="Structure" order="1" sideWeight="0.20251717" side_tool="true" visible="true" weight="0.1375" />
+      <window_info id="Structure" order="1" sideWeight="0.20730397" side_tool="true" visible="true" weight="0.14163615" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info id="Favorites" order="2" sideWeight="0.47033286" side_tool="true" weight="0.1375" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" sideWeight="0.47033286" side_tool="true" weight="0.1375" />
       <window_info anchor="right" id="JetGradle" order="3" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32837528" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Database Console" order="8" weight="0.32923076" />
@@ -765,12 +761,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kernel/LICENCE.md" />
     <entry file="file://$PROJECT_DIR$/src/kernel/views/LoginView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2244">
           <caret line="102" column="20" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kernel/utils/PromptBar.java" />
     <entry file="file://$PROJECT_DIR$/src/kernel/models/Order.java">
@@ -781,12 +777,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kernel/views/AdminVIew.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11176">
           <caret line="508" column="25" selection-start-line="508" selection-start-column="25" selection-end-line="508" selection-end-column="25" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kernel/models/MagazineClass.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -841,12 +837,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kernel/views/CommonUserView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kernel/utils/DialogUtils.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -865,20 +861,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kernel/utils/JdbcUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="60" column="49" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/kernel/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
+        <state relative-caret-position="506">
           <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kernel/utils/JdbcUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
         </state>
       </provider>
     </entry>
